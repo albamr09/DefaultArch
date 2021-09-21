@@ -52,6 +52,7 @@
 
 - nodejs
 - npm
+- yarn
 - playerctl
 - python3
   - dbus-python

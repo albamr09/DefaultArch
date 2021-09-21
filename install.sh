@@ -6,8 +6,8 @@ instalar_dependencias(){
 	echo "-------------- Instalar dependencias --------------"
 	echo "---------------------------------------------------"
 
-	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock
-	pip3 install dbus-python zathura i3lock-color
+	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock zathura i3lock-color
+	pip3 install dbus-python
 
 	echo "----------------------------------------------"
 	echo " + Intalar oh-my-zsh"
