@@ -66,6 +66,7 @@
 
 - JetBrainsMono
 - VictorMono
+- IBM Plex Mono
 
 ---
 
