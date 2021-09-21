@@ -34,6 +34,9 @@ copiar_dotfiles(){
 	echo "----------------- Copiar dotfiles -----------------"
 	echo "---------------------------------------------------"
 
+	# Delete qutebrowser config
+	rm -r /home/$USER/.config/qutebrowser /home/$USER/.config/rofi
+
 	# Normal dotfiles
 	cp -r home/.??* /home/$USER
 	# Lightdm dotfiles
