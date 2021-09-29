@@ -43,6 +43,9 @@ Plug 'karb94/neoscroll.nvim'
 " Markdownpreview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+" Vimwiki
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 
@@ -234,3 +237,31 @@ let g:mkdp_echo_preview_url = 1
 " Mappings
 
 nmap <C-s> <Plug>MarkdownPreview        " Open preview
+
+" -------------- ] Toggle spell checking [ ----------------
+
+" Spell checking language
+set spelllang=en,cjk
+
+" Toggle with F11
+nnoremap <silent> <F11> :set spell!<cr>
+inoremap <silent> <F11> <C-O>:set spell!<cr>
+
+" -------------- ] Vimwiki mappings [ ----------------
+
+set nocompatible
+filetype plugin on
+syntax on
+
+"<Leader>ww -- Open default wiki index file.
+"<Leader>wt -- Open default wiki index file in a new tab.
+"<Leader>ws -- Select and open wiki index file.
+"<Leader>wd -- Delete wiki file you are in.
+"<Leader>wr -- Rename wiki file you are in.
+"<Enter> -- Follow/Create wiki link.
+
+" :Vimwiki2HTML -- Convert current wiki link to HTML.
+" :VimwikiAll2HTML -- Convert all your wiki links to HTML.
+
+" Change root vimwiki dir
+let g:vimwiki_list = [{'path': '~/Desktop/MyNotes'}]
