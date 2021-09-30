@@ -106,3 +106,10 @@ let g:mkdp_echo_preview_url = 1
 
 " Vimwiki working directory
 let g:vimwiki_list = [{'path': '~/Desktop/MyNotes'}]
+
+" -------------- ] Latex Preview [ ----------------
+ 
+let g:vimtex_view_general_viewer = 'zathura'
+let g:vimtex_view_general_options = '-reuse-instance @pdf'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+
