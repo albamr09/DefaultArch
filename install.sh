@@ -6,7 +6,7 @@ instalar_dependencias(){
 	echo "-------------- Instalar dependencias --------------"
 	echo "---------------------------------------------------"
 
-	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock zathura i3lock-color
+	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock zathura i3lock-color acpi dunst
 	pip3 install dbus-python
 
 	echo "----------------------------------------------"
@@ -60,6 +60,10 @@ copiar_servicios(){
 
 	sudo cp services/* /etc/systemd/system
 	sudo systemctl enable suspend@alba
+	# Servicio de notificación de batería
+  	systemctl --user enable check-battery-user.timer
+  	# Servicio de notificación de batería
+  	systemctl --user start check-battery-user.service
 	#Actualizar
 	sudo systemctl daemon-reload
 }
@@ -86,6 +90,18 @@ configurar_nvim(){
 	pip3 install neovim
 }
 
+configurar_dunst(){
+
+  echo "---------------------------------------------------"
+	echo "----------------- Configurar dunst ----------------"
+	echo "---------------------------------------------------"
+
+  # Eliminar proceso
+  killall dunst
+  # Establecer/actualizar fichero de configuracion
+  dunst -config ~/.config/dunst/dunstrc &
+}
+
 
 
 instalar_dependencias
@@ -95,3 +111,4 @@ copiar_fuentes
 copiar_servicios
 instalar_caffeine
 configurar_nvim
+configurar_dunst
