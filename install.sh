@@ -6,7 +6,10 @@ instalar_dependencias(){
 	echo "-------------- Instalar dependencias --------------"
 	echo "---------------------------------------------------"
 
-	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock zathura i3lock-color acpi dunst
+	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi \ 
+	ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot \ 
+	zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock \ 
+	zathura i3lock-color acpi dunst llvm clang-format cmake
 	pip3 install dbus-python
 
 	echo "----------------------------------------------"
@@ -87,7 +90,7 @@ configurar_nvim(){
 	curl -fLo /home/$USER/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	nvim -c 'so ~/.config/nvim/init.vim|q'
 	nvim -c 'PlugInstall|q|q'
-	pip3 install neovim
+	pip3 install neovim cpplint
 }
 
 configurar_dunst(){
