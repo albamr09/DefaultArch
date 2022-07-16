@@ -90,7 +90,7 @@ configurar_nvim(){
 	curl -fLo /home/$USER/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	nvim -c 'so ~/.config/nvim/init.vim|q'
 	nvim -c 'PlugInstall|q|q'
-	pip3 install neovim cpplint
+	pip3 install neovim cpplint pynvim
 }
 
 configurar_dunst(){
