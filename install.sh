@@ -9,7 +9,7 @@ instalar_dependencias(){
 	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi \ 
 	ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot \ 
 	zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock \ 
-	zathura i3lock-color acpi dunst llvm clang-format cmake
+	zathura i3lock-color acpi dunst llvm clang-format cmake ripgrep
 	pip3 install dbus-python
 
 	echo "----------------------------------------------"
