@@ -117,9 +117,9 @@ configurar_dunst(){
 
 instalar_dependencias
 eliminar_wallpapers
+configurar_nvim
 copiar_dotfiles
 copiar_fuentes
 copiar_servicios
 instalar_caffeine
-configurar_nvim
 configurar_dunst
