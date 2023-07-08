@@ -6,7 +6,7 @@ instalar_dependencias(){
 	echo "-------------- Instalar dependencias --------------"
 	echo "---------------------------------------------------"
 
-	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock zathura i3lock-color acpi dunst llvm clang cmake ripgrep lldb
+	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock zathura i3lock-color acpi dunst llvm clang cmake ripgrep lldb tmux
 	pip3 install dbus-python
 
 	echo "----------------------------------------------"
@@ -98,6 +98,15 @@ configurar_nvim(){
 	pip3 install neovim cpplint pynvim
 }
 
+configurar_tmux() {
+
+    echo "----------------------------------------------"
+    echo "------------ Configurar tmux -----------------"
+    echo "----------------------------------------------"
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+}
+
 configurar_dunst(){
 
   echo "---------------------------------------------------"
@@ -115,6 +124,7 @@ configurar_dunst(){
 instalar_dependencias
 eliminar_wallpapers
 configurar_nvim
+configurar_tmux
 copiar_dotfiles
 copiar_fuentes
 copiar_servicios
