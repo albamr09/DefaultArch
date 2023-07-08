@@ -7,7 +7,7 @@ instalar_dependencias(){
 	echo "---------------------------------------------------"
 
 	yay -S i3-wm i3-gaps picom alacritty neovim nitrogen rofi ttf-font-awesome awesome-terminal-fonts pamixer ranger scrot zsh nodejs npm qutebrowser playerctl python3 python-pip xss-lock zathura i3lock-color acpi dunst llvm clang cmake ripgrep lldb tmux
-	pip3 install dbus-python
+	pip3 install dbus-python pipewire pipewire-pulse pipewire-jack pipewire-alsa pipewire-audio bluez bluez-utils
 
 	echo "----------------------------------------------"
 	echo " + Intalar oh-my-zsh"
