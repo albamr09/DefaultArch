@@ -83,6 +83,7 @@ configure_services(){
     title_msg "Configuring services"
 
     execute sudo systemctl enable suspend@$USER
+    execute sudo systemctl enable ligthdm
     # Battery notifcation service
     execute systemctl --user enable check-battery-user.timer
     execute systemctl --user start check-battery-user.service
